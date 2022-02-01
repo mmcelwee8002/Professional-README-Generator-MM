@@ -11,6 +11,15 @@
 // function renderLicenseSection(license) { }
 
 // TODO: Create a function to generate markdown for README
+const generateInstall = installText => {
+  if (!installText) {
+    return ''
+  } else {
+    return `## Installation
+    ${installText}
+    `
+  }
+}
 const generateContribute = contributeText => {
   if (!contributeText) {
     return ''
@@ -20,10 +29,29 @@ const generateContribute = contributeText => {
     `
   }
 }
-
-
-
-
+const generateTesting = testText => {
+  if (!testText) {
+    return ''
+  } else {
+    return `## Testing
+    ${testText}
+    `
+  }
+}
+const installCheck = check => {
+  if (!check) {
+    return '';
+  } else {
+    return `* [Installation](#installation)`
+  }
+}
+const contributeCheck = check => {
+  if (!check) {
+    return '';
+  } else {
+    return `* [Contributions](#contributions)`
+  }
+}
 
 function generateMarkdown(data) {
   return `
