@@ -1,15 +1,28 @@
 {
-  "name": "static-site",
+  "name": "readme_generator",
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
-  "license": "ISC",
+  "author": "Matthew McElwee",
+  "license": "MIT",
   "dependencies": {
     "inquirer": "^6.5.2"
   },
   "devDependencies": {},
-  "description": ""
+  "description": "Generates a new professional ReadME file for bootcamp project.",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mmcelwee8002/Professional-README-Generator-MM.git"
+  },
+  "keywords": [
+    "Professional",
+    "ReadME",
+    "File"
+  ],
+  "bugs": {
+    "url": "https://github.com/mmcelwee8002/Professional-README-Generator-MM/issues"
+  },
+  "homepage": "https://github.com/mmcelwee8002/Professional-README-Generator-MM#readme"
 }
