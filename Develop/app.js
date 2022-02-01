@@ -1,7 +1,8 @@
 // TODO: Include packages needed for this application
-// const fs = require('fs');
-// const generateFile = require('./utils/generateFile.js');
+
+const { writeFile, copyFile } = require('./utils/generateFile.js');
 const inquirer = require('inquirer');
+const generateMarkdown = require('./utils/generateMarkdown.js');
 // const generateMarkdown = require('./utils/generateMarkdown.js');
 
 
@@ -89,11 +90,80 @@ const promptQuestions = () => {
                     return false;
                 }
             }
+        },
+        {
+            type: 'checkbox',
+            name: 'license',
+            message: 'Did you use any of the following licenses?',
+            choices: ['MIT', 'Apache 2.0', 'Creative Commons 1.0', 'GPLv3', 'WTFPL']
+        },
+        {
+            type: 'confirm',
+            name: 'collab',
+            message: 'Will your project have a collaborator?',
+            default: true
+        },
+        {
+            type: 'input',
+            name: 'usage',
+            message: 'Please explain the usage of this project:',
+            validate: usageInput => {
+                if (usageInput) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
+        },
+        {
+            type: 'confirm',
+            name: 'confirmInstall',
+            message: 'Does your project need special instructions on how to install?',
+            default: true
+        },
+
+        {
+            type: 'input',
+            name: 'install',
+            message: 'Enter your installation instructions:',
+            when: ({ confirmInstall }) => {
+                if (confirmInstall) {
+                    return true;
+                } else {
+                    return false;
+                }
+            }
         }
 
+
+
     ])
+
+
+        .then(data => {
+            return generateMarkdown(data);
+        })
+        .then(Markdown => {
+            return writeFile(Markdown);
+        })
+        .then(writeFileResponse => {
+            console.log(writeFileResponse);
+            return copyFile();
+        })
+        .then(copyFileResponse => {
+            console.log(copyFileResponse);
+        })
+
+        .catch(err => {
+            console.log(err);
+        })
 }
-promptQuestions().then(answers => console.log(answers));
+function init() {
+    promptQuestions()
+}
+
+init();
+// promptQuestions().then(answers => console.log(answers));
 
 
 
