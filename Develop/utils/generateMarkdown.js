@@ -72,10 +72,9 @@ function generateMarkdown(data) {
     * This application is covered under the ${data.license} license
     ${generateContribute(data.contribution)}
     ${generateTesting(data.testing)}
-    ## Questions
-    Created by: [${data.githubUsername}](${data.gitLink})
+    ## Created by: [${data.name}](${data.gitLink})
     
-    If you have any further questions please feel free to contact me at [${data.email}](${data.email})
+    If you have any further questions please feel free to contact me at [${data.name}](${data.email})
   `;
 }
 
