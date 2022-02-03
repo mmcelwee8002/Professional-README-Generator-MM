@@ -1,9 +1,12 @@
 
+#Professional-README-Generator-MM
 
-
-
-    ## Description
+## Discription:
     This is a professional readme File that was created for a project in the coding bootcamp.  It is a weekly challenge.  #9.  
+
+
+
+
 
 ## Table of Contents
 * [Installation instructions ](#Installation-instructions)
@@ -18,26 +21,20 @@
     https://img.shields.io/github/license/undefined/Professional-README-Generator-MM
 
 
-    # Professional-README-Generator-MM
-    ## Description
-    This is a professional readme File that was created for a project in the coding bootcamp.  It is a weekly challenge.  #9.  
-    ## Table of Contents
-    
-    * [Usage](#usage)
-    * [License](#license)
+  
  
 
+##Install
+Download or clone my repository and Please install 'Inquirer.js' from npm.com
 
 
+## Usage
+This is to generate a professional readme File
+
+## License
+* This application is covered under the MIT license
     
-
-    ## Usage
-    This is a professional readme File that was created for a project in the coding bootcamp.  It is a weekly challenge.  #9.  
-
-    ## License
-    * This application is covered under the MIT license
-    
-    ###Screenshot ![Readme](images/Screenshot 2022-02-03 121313.png)
+    ###Screenshot ![Readme](images/Readme-Screenshot.png)
 
 
     

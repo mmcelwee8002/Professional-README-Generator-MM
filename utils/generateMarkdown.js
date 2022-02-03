@@ -89,11 +89,14 @@ ${noInfo}`
 
 function generateMarkdown(data) {
   return `
+#${data.title}
+
+## Discription:
+    ${data.about}
 
 ${licenseBadge(data.license)}
 
-    ## Description
-    ${data.about}
+
 
 ## Table of Contents
 * [Installation instructions ](#Installation-instructions)
@@ -108,26 +111,20 @@ ${licenseBadge(data.license)}
     https://img.shields.io/github/license/${data.githubUsername}/${data.title}
 
 
-    # ${data.title}
-    ## Description
-    ${data.about}
-    ## Table of Contents
-    ${installCheck(data.install)}
-    * [Usage](#usage)
-    * [License](#license)
+  
  
 
+##Install
+${data.install}
 
 
-    ${generateInstall(data.install)}
+## Usage
+${data.usage}
 
-    ## Usage
-    ${data.usage}
-
-    ## License
-    * This application is covered under the ${data.license} license
+## License
+* This application is covered under the ${data.license} license
     
-    ###Screenshot ![Readme](images/Screenshot 2022-02-03 121313.png)
+    ###Screenshot ![Readme](images/Readme-Screenshot.png)
 
 
     ${generateContribute(data.contribution)}

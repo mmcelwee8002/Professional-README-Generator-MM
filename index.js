@@ -95,7 +95,17 @@ const promptQuestions = () => {
             type: 'checkbox',
             name: 'license',
             message: 'Did you use any of the following licenses?',
-            choices: ['MIT', 'Apache 2.0', 'Creative Commons 1.0', 'GPLv3', 'WTFPL']
+            choices: ['MIT', 'Apache 2.0', 'Creative Commons 1.0', 'GPLv3', 'WTFPL', 'None'],
+              validate: licenseInput => {
+                  if (licenseInput) {
+                    return true;
+                } else {
+                    console.log('Please enter some information!')
+                    return false;
+                }
+            } 
+
+
         },
         {
             type: 'confirm',
@@ -146,10 +156,10 @@ const promptQuestions = () => {
         .then(Markdown => {
             return writeFile(Markdown);
         })
-        .then(writeFileResponse => {
-            console.log(writeFileResponse);
-            return copyFile();
-        })
+        // .then(writeFileResponse => {
+        //     console.log(writeFileResponse);
+        //     return copyFile();
+        // })
         .then(copyFileResponse => {
             console.log(copyFileResponse);
         })
