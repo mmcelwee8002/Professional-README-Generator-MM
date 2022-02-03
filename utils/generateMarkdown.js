@@ -89,7 +89,7 @@ ${noInfo}`
 
 function generateMarkdown(data) {
   return `
-#${data.title}
+## ${data.title}
 
 ## Discription:
     ${data.about}
@@ -114,7 +114,7 @@ ${licenseBadge(data.license)}
   
  
 
-##Install
+## Install
 ${data.install}
 
 
@@ -124,7 +124,11 @@ ${data.usage}
 ## License
 * This application is covered under the ${data.license} license
     
-    ###Screenshot ![Readme](images/Readme-Screenshot.png)
+    ### Screenshot 
+    ![Readme](images/Readme-Screenshot.png)
+
+    ## Demo
+    ![Demo] (Readme-Demo.mp4)
 
 
     ${generateContribute(data.contribution)}

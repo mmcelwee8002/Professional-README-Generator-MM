@@ -1,8 +1,8 @@
 
-#Professional-README-Generator-MM
+## Professional-README-Generator-MM
 
 ## Discription:
-    This is a professional readme File that was created for a project in the coding bootcamp.  It is a weekly challenge.  #9.  
+    This is a professional readme File that was created for a project in the coding bootcamp.
 
 
 
@@ -24,17 +24,21 @@
   
  
 
-##Install
-Download or clone my repository and Please install 'Inquirer.js' from npm.com
+## Install
+Please clone or download repository and also please install 'Inquirer.js' from npm.com
 
 
 ## Usage
-This is to generate a professional readme File
+This is to generate a professional readme File.  It is a weekly challenge.  #9.  
 
 ## License
 * This application is covered under the MIT license
     
-    ###Screenshot ![Readme](images/Readme-Screenshot.png)
+    ### Screenshot 
+    ![Readme](images/Readme-Screenshot.png)
+
+    ## Demo
+    ![Demo] (Readme-Demo.mp4)
 
 
     
