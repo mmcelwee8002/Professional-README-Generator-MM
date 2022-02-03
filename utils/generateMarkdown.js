@@ -53,9 +53,61 @@ const contributeCheck = check => {
   }
 }
 
+//create the markup for the license badge
+const licenseBadge = (license) => {
+  if (license !== 'None') {
+    let badge = ''
+    switch (license) {
+      case 'MIT': badge = `[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)`
+        break;
+      case 'GNU GPLv3': badge = `[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)](https://www.gnu.org/licenses/gpl-3.0)`
+        break;
+      case 'Mozilla Public 2.0': badge = `[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)](https://opensource.org/licenses/MPL-2.0)`
+        break;
+      case 'The Unlicense': badge = `[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)](http://unlicense.org/)`
+        break;
+      case 'Apache 2.0': badge = `[![License](https://img.shields.io/badge/License-Apache_2.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)`
+        break;
+      default: badge = ''
+    }
+    return badge
+  } else {
+    return ''
+  }
+}
+const licenseText = (license) => {
+  if (license !== 'None') {
+    return `
+## License
+Licensed under the ${license} license.`
+  } else {
+    return `
+## License
+${noInfo}`
+  }
+}
+
 function generateMarkdown(data) {
   return `
-    ![GitHub](https://img.shields.io/github/license/${data.githubUsername}/${data.title})
+
+${licenseBadge(data.license)}
+
+    ## Description
+    ${data.about}
+
+## Table of Contents
+* [Installation instructions ](#Installation-instructions)
+* [Usage instructions ](#Usage-instructions)
+* [Contributing to this project ](#Contributing-to-this-project)
+* [Credits](#Credits)
+* [License](#License)
+* [Testing Instructions](#Testing-Instructions)
+* [Questions](#Questions)
+
+    ## GitHub
+    https://img.shields.io/github/license/${data.githubUsername}/${data.title}
+
+
     # ${data.title}
     ## Description
     ${data.about}
@@ -64,12 +116,20 @@ function generateMarkdown(data) {
     * [Usage](#usage)
     * [License](#license)
  
-    
+
+
+
     ${generateInstall(data.install)}
+
     ## Usage
     ${data.usage}
+
     ## License
     * This application is covered under the ${data.license} license
+    
+    ###Screenshot ![Readme](images/Screenshot 2022-02-03 121313.png)
+
+
     ${generateContribute(data.contribution)}
     ${generateTesting(data.testing)}
     ## Created by: [${data.name}](${data.gitLink})

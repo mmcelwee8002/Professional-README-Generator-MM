@@ -99,7 +99,7 @@ const promptQuestions = () => {
         },
         {
             type: 'confirm',
-            name: 'collab',
+            name: 'collaborator',
             message: 'Will your project have a collaborator?',
             default: true
         },
