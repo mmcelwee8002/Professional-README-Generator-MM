@@ -29,15 +29,17 @@ const generateContribute = contributeText => {
     `
   }
 }
-const generateTesting = testText => {
-  if (!testText) {
+const generateTesting = testsText => {
+  if (!testsText) {
     return ''
   } else {
     return `## Testing
-    ${testText}
+    ${testsText}
     `
   }
 }
+
+
 const installCheck = check => {
   if (!check) {
     return '';
@@ -86,16 +88,7 @@ Licensed under the ${license} license.`
 ${noInfo}`
   }
 }
-const testingText = (tests) => {
-  if (tests) {
-    return `
-## Testing Instructions
-${tests}`
-  }
-  return `
-## Testing instructions 
-${noInfo}`
-}
+
 
 
 
@@ -126,7 +119,7 @@ ${licenseBadge(data.license)}
 ${data.name}
   
 ## Tests
- ${tests}
+ ${data.tests}
  
 
 ## Install

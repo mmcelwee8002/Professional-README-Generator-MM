@@ -138,8 +138,15 @@ const promptQuestions = () => {
             type: 'input',
             name: 'tests',
             message: 'Provide testing instructions:',
-        },
-
+            validate: testinput => {
+                if (testinput) {
+                    return true;
+                } else {
+                    console.log('Please enter your test info.  If no test put none!');
+                    return false;
+                }
+            },
+        }
 
     ])
 
