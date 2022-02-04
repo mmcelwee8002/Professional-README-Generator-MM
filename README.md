@@ -41,7 +41,7 @@ This is to generate a professional readme File
     ![Readme](images/Readme-Screenshot.png)
 
     ## Demo
-    ![Demo] (https://drive.google.com/file/d/1BhUB50AXuBNMrgHIZqBQguARodqclTbc/view?usp=sharing)
+    ![Demo] (https://drive.google.com/file/d/1BhUB50AXuBNMrgHIZqBQguARodqclTbc/view?usp=sharing){:target="\blank"}
 
 
     
