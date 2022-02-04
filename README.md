@@ -40,8 +40,8 @@ This is to generate a professional readme File
     ### Screenshot 
     ![Readme](images/Readme-Screenshot.png)
 
-    ## Demo
-    ![Demo] (https://drive.google.com/file/d/1BhUB50AXuBNMrgHIZqBQguARodqclTbc/view?usp=sharing){:target="\blank"}
+    ## Demo:  Click link to view demo video
+    ![Demo] (https://drive.google.com/file/d/1BhUB50AXuBNMrgHIZqBQguARodqclTbc/view?usp=sharing)
 
 
     
