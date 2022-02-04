@@ -86,10 +86,22 @@ Licensed under the ${license} license.`
 ${noInfo}`
   }
 }
+const testingText = (tests) => {
+  if (tests) {
+    return `
+## Testing Instructions
+${tests}`
+  }
+  return `
+## Testing instructions 
+${noInfo}`
+}
+
+
 
 function generateMarkdown(data) {
   return `
-## ${data.title}
+# ${data.title}
 
 ## Discription:
     ${data.about}
@@ -110,8 +122,11 @@ ${licenseBadge(data.license)}
     ## GitHub
     https://img.shields.io/github/license/${data.githubUsername}/${data.title}
 
-
+### Contributer
+${data.name}
   
+## Tests
+ ${tests}
  
 
 ## Install

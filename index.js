@@ -92,20 +92,10 @@ const promptQuestions = () => {
             }
         },
         {
-            type: 'checkbox',
+            type: 'list',
             name: 'license',
-            message: 'Did you use any of the following licenses?',
-            choices: ['MIT', 'Apache 2.0', 'Creative Commons 1.0', 'GPLv3', 'WTFPL', 'None'],
-              validate: licenseInput => {
-                  if (licenseInput) {
-                    return true;
-                } else {
-                    console.log('Please enter some information!')
-                    return false;
-                }
-            } 
-
-
+            message: 'Select a license type if you wish to include one. Arrow keys to move, Enter to select:',
+            choices: ['None', 'MIT', 'GNU GPLv3', 'Mozilla Public 2.0', 'The Unlicense', 'Apache 2.0']
         },
         {
             type: 'confirm',
@@ -143,8 +133,12 @@ const promptQuestions = () => {
                     return false;
                 }
             }
-        }
-
+        },
+        {
+            type: 'input',
+            name: 'tests',
+            message: 'Provide testing instructions:',
+        },
 
 
     ])
